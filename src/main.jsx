@@ -7,7 +7,7 @@ import "./index.css";
 import { createAppAsyncStore, createAppStore } from "./store/config/storeConfig";
 
 // let appStore = createAppStore()
-let appAsyncStore = createAppAsyncStore
+let appAsyncStore = createAppAsyncStore()
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={appAsyncStore}>

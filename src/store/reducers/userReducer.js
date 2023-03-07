@@ -21,19 +21,19 @@ export const userReducer = (state=initialState, action) => {
         case API_CALL_SUCCESS:
             return {
                 ...state,
-                fetching: true,
+                fetching: false,
+                token: action.payload.token,
                 error: null,
                 loged: true,
-                token: action.payload.token
             }
 
         case API_CALL_FAILURE:
             return {
                 ...state,
                 fetching: false,
+                token: null,
                 error: action.payload.error,
                 loged: false,
-                token: null
             }
     
         default:
